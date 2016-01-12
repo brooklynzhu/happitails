@@ -1,0 +1,9 @@
+<%= form_for @client do |c| %>
+
+	<p> NAME: <%=c.text_field :name%></p>
+	<p> AGE: <%=c.text_field :age%></p>
+	<p> PHOTO: <%=c.text_field :photo%></p>
+
+	<p><%=c.submit%></p>
+
+	<%end%>

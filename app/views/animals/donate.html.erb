@@ -1,0 +1,12 @@
+<h1>Donate <%=@animal.name%></h1>
+
+Select a shelter to donate <%=@animal.name%> 
+
+
+	<%= form_tag(client_animal_complete_donation_path, method: 'put') do %>
+	<p> 
+		Donate <%= @animal.name %> to 
+		<%= select_tag('shelter', options_from_collection_for_select(@shelter, "id", "name")) %>
+		<%= submit_tag 'submit' %>
+	</p>
+<% end %>

@@ -1,0 +1,21 @@
+<h1> Welcome to Happitails!</h1>
+
+<%=link_to "Add an Animal", new_shelter_animal_path(@shelter)%> | 
+<%=link_to "Add a Client", new_shelter_client_path(@shelter)%> | 
+
+
+<h2> Animals Available for Adoption </h2>
+	
+	<ul> <%@animals.each do |s|%>
+
+	<li><%=link_to s.name, shelter_animal_path(@shelter, s)%></li>
+		
+	<%end%></ul>
+
+
+<h2> Clients </h2>
+
+	<ul> <%@clients.each do |c|%>
+	<li> <%=link_to c.name, shelter_client_path(@shelter, c)%></li>
+	<%end%></ul>
+

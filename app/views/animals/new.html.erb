@@ -1,0 +1,9 @@
+<%= form_for @animal do |a| %>
+
+	<p> NAME: <%=a.text_field :name%></p>
+	<p> SPECIES: <%=a.text_field :species%></p>
+	<p> PHOTO: <%=a.text_field :photo%></p>
+
+	<p><%=a.submit%></p>
+
+	<%end%>

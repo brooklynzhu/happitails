@@ -1,0 +1,23 @@
+<h1><%=@client.name%></h1>
+
+<p><img src= <%=@client.photo%> height=300> </p>
+
+<p><h3>Shelter: <%=link_to @shelter.name, shelter_path(@shelter)%></h3></p>
+
+<p><h3> Pets:</h3></p>
+
+<ul><%@pets.each do |p|%>
+
+<p><li><img src = <%=p.photo%> height= 300></li></p>
+<p><%=link_to p.name, p%></p>
+
+<%end%></ul>
+
+
+
+
+
+
+
+
+

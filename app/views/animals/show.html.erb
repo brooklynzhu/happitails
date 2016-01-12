@@ -1,0 +1,10 @@
+<h1><%=@animal.name%></h1>
+
+<p><img src= <%=@animal.photo%>> </p>
+
+<p><%=link_to "Adopt #{@animal.name}!", shelter_animal_adopt_path(@shelter, @animal)%></p>
+
+<p><%=link_to "Donate #{@animal.name}", client_animal_donate_path(@client, @animal)%></p>
+
+
+<p><%=link_to "Back to #{@shelter.name}", shelter_path(@shelter)%></p>

@@ -1,0 +1,23 @@
+<h1>Adopt <%=@animal.name%></h1>
+
+Select a client to adopt <%=@animal.name%> 
+
+
+	<%= form_tag(shelter_animal_complete_adoption_path, method: 'put') do %>
+	<p> 
+		Who is adopting <%= @animal.name %>? 
+		<%= select_tag('client', options_from_collection_for_select(@clients, "id", "name")) %>
+		<%= submit_tag 'submit' %>
+	</p>
+<% end %>
+
+
+	
+
+
+	
+
+
+
+
+
